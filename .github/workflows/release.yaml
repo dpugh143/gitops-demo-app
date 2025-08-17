@@ -27,6 +27,8 @@ jobs:
           context: .
           push: true
           tags: docker.io/${{ secrets.REGISTRY_USER }}/gitops-demo:${{ env.TAG_NAME }}
+          build-args: |
+            APP_VERSION=${{ env.TAG_NAME }}
   trigger-deployment-update:
     runs-on: ubuntu-latest
     needs: build-and-push
