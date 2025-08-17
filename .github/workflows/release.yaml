@@ -38,7 +38,7 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: update-deployment.yaml
-          repo: wisesphinx143/gitops-demo-env
+          repo: dpugh143/gitops-demo-env
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           ref: main
           inputs: |
